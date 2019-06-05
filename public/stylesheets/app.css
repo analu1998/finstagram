@@ -1,0 +1,18 @@
+body {
+  background: #ddf6ff;
+}
+
+header {
+  background: white;
+  box-shadow: 5px 5px 5px #78787869;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.finstagram-post {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #78787869;
+  margin: 10px;
+}
