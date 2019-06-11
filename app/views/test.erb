@@ -1,0 +1,17 @@
+<div  class="test">
+  <h1>
+    Test Page
+  </h1>
+  <div>
+    You are logged in as <%= @user[:username] %>
+  </div>
+  <div>
+    <ul>
+     <% @user[:friends].each do |friend| %>
+      <li>
+        <%= friend %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

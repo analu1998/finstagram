@@ -47,6 +47,23 @@ get '/' do
   }
 
   @finstagram_posts = [@finstagram_post_shark, @finstagram_post_whale, @finstagram_post_marlin]
-  
-  erb(:index)
+  @finstagram_posts.to_s
+#   erb(:index)
+end
+
+get '/test' do
+  @user = {
+      "username": "Jonny123",
+      "friends": [
+        "tom",
+        "anna",
+        "will",
+        "Alex"
+        ]
+    }
+  erb(:test)
+end
+
+get '/new-route' do
+  erb(:myfile)
 end
