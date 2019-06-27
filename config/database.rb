@@ -1,22 +1,19 @@
 configure do
   # Log queries to STDOUT in development
-  if Sinatra::Application.development?
-    ActiveRecord::Base.logger = Logger.new(STDOUT)
-
-    # configures database to sqlite3 in development
+ if Sinatra::Application.development?
     set :database, {
       adapter: "sqlite3",
       database: "db/db.sqlite3"
     }
   else
-    db = URI.parse(ENV['DATABASE_URL']
+    db = URI.parse(ENV['DATABASE_URL'])
     set :database, {
       adapter: "postgresql",
       host: db.host,
       username: db.user,
       password: db.password,
       database: db.path[1..-1],
-      encoding: 'utf8'
+      encoding: "utf8"
     }
   end
 
