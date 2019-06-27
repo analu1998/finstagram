@@ -1,0 +1,7 @@
+<form class="new-comment" action="/comments" method="POST">
+  <div class="form-group">
+    <input type="text" id="text" name="text" placeholder="Comment">
+  </div>
+  <input type="hidden" id="user_id" name="user_id" value="<%= current_user.id %>">
+  <input type="hidden" id="post_id" name="finstagram_post_id" value="<%= finstagram_post.id %>">
+</form>

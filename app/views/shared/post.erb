@@ -1,0 +1,9 @@
+<article class="finstagram-post">
+  <%= erb :'shared/post/user_info', locals: { finstagram_post: finstagram_post } %>
+  <%= erb :'shared/post/photo', locals: { finstagram_post: finstagram_post } %>
+  <%= erb :'shared/post/actions', locals: { finstagram_post: finstagram_post } %>
+  <% if show_comment_form && current_user %>
+    <%= erb :'shared/post/comment_form', locals: { finstagram_post: finstagram_post } %>
+  <% end %>
+  <%= erb :'shared/post/comments', locals: { comments: finstagram_post.comments } %>
+</article>

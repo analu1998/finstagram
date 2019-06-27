@@ -1,4 +1,10 @@
-<%= @error_message if @error_message %>
+<% if @error_messages %>
+  <ul class="errors">
+    <% @error_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <form action="/login" method="POST">
   <div class="form-group">

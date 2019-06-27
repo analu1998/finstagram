@@ -1,0 +1,9 @@
+<ul class="comments">
+  <% comments.each do |comment| %>
+    <li>
+      <p>
+        <%= comment.user.username %>: <%= comment.text %>
+      </p>
+    </li>
+  <% end %>
+</ul>
