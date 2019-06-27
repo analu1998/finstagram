@@ -10,8 +10,13 @@ gem 'sinatra-activerecord'
 
 gem 'puma'
 gem 'tux'
-gem 'pry'
-  
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+  gem 'pry'
+end
+
 group :development, :test do
   gem 'shotgun'
   gem 'sqlite3', '~> 1.3.6'
